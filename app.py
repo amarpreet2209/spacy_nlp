@@ -23,7 +23,7 @@ import spacy
 nlp = spacy.load('en_core_web_md')
 
 import nltk
-nltk.download('stopwords')
+# nltk.download('stopwords')
 
 from nltk.stem.porter import PorterStemmer
 porter_stemmer = PorterStemmer()
