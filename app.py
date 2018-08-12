@@ -20,7 +20,7 @@ from flask import Flask,request,jsonify
 app = Flask(__name__)
 
 import spacy
-nlp = spacy.load('en_core_web_sm')
+nlp = spacy.load('en')
 
 import nltk
 # nltk.download('stopwords')
