@@ -45,7 +45,7 @@ UPLOAD_FOLDER = os.path.dirname(os.path.abspath(__file__))
 
 
 @app.route('/', methods=["POST"])
-def example():
+def index():
 
 
 	target = os.path.join(UPLOAD_FOLDER,'')
@@ -162,6 +162,7 @@ def example():
 
 	return jsonify(result)
 
-app.run()
+if __name__ == '__main__':
+    app.run(debug=True, use_reloader=True)
 
 
