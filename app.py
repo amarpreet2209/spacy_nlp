@@ -37,8 +37,8 @@ from word2number import w2n
 import speech_recognition as sr
 r = sr.Recognizer()
 
-# import assemblyai
-# aai = assemblyai.Client(token='39f8f26db4c546c99308fba032eda3dd')
+import assemblyai
+aai = assemblyai.Client(token='39f8f26db4c546c99308fba032eda3dd')
 
 import os
 from werkzeug.utils import secure_filename
@@ -59,14 +59,14 @@ def index():
 		destination = "/".join([target,f.filename])
 		f.save(destination)
 		
-		# transcript = aai.transcribe(filename=f.filename)
-		# while transcript.status != 'completed':
-		# 	transcript = transcript.get()
-		# text = transcript.text
-		harvard = sr.AudioFile(f.filename)
-		with harvard as source:
-  			audio = r.record(source)
-		text = r.recognize_google(audio)
+		transcript = aai.transcribe(filename=f.filename)
+		while transcript.status != 'completed':
+			transcript = transcript.get()
+		text = transcript.text
+		# harvard = sr.AudioFile(f.filename)
+		# with harvard as source:
+  # 			audio = r.record(source)
+		# text = r.recognize_google(audio)
 
 	example_sent = text
 
