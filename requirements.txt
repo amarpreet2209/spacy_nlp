@@ -5,7 +5,10 @@ click==6.7
 cymem==1.31.2
 cytoolz==0.9.0.1
 dill==0.2.8.2
+en-core-web-md==2.0.0
+en-core-web-sm==2.0.0
 Flask==1.0.2
+gunicorn==19.9.0
 idna==2.7
 itsdangerous==0.24
 Jinja2==2.10
@@ -32,5 +35,3 @@ urllib3==1.23
 Werkzeug==0.14.1
 word2number==1.1
 wrapt==1.10.11
-https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.0.0/en_core_web_sm-2.0.0.tar.gz
-gunicorn
